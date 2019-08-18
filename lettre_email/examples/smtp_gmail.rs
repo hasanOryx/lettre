@@ -5,6 +5,8 @@ use lettre::smtp::authentication::Credentials;
 use lettre::{SmtpClient, Transport};
 use lettre_email::Email;
 
+// You need to allow less secure apps access, otherwise it will not work
+// https://myaccount.google.com/lesssecureapps
 fn main() {
     let email = Email::builder()
         .to("to@example.org")
